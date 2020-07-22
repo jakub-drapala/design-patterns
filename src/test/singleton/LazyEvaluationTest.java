@@ -1,14 +1,12 @@
 package test.singleton;
 
 import com.drapala.singleton.LazyEvaluation;
-import jdk.jfr.StackTrace;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class LazyEvaluationTest {
-
 
     @Test
     public void lazyEvaluationTest() {

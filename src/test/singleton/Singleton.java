@@ -1,12 +1,13 @@
 package test.singleton;
 
+import com.drapala.singleton.BillPugh;
 import com.drapala.singleton.LazyEvaluation;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class LazyEvaluationTest {
+public class Singleton {
 
     @Test
     public void lazyEvaluationTest() {
@@ -18,4 +19,12 @@ public class LazyEvaluationTest {
         assertEquals(value, singleton.getValue());
     }
 
+    @Test
+    public void billPughTest() {
+        int value = 20;
+        BillPugh singleton = BillPugh.getInstance();
+        singleton.setValue(value);
+        BillPugh singleton2 = BillPugh.getInstance();
+        assertEquals(value, singleton2.getValue());
+    }
 }
